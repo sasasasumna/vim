@@ -4,6 +4,7 @@
 
 vim_config_dir="$(git rev-parse --show-toplevel)"
 ln -sf $vim_config_dir/vimrc $HOME/.vimrc
+mkdir -p $vim_config_dir/swp
 
 #
 # Arguments:
@@ -40,6 +41,7 @@ function package () {
     git submodule add $repo_url $submodule_name
   fi
 }
+echo "Updating installed plugins via 'git submodule update --remote --merge'..."
 git submodule update --remote --merge
 
 set_group ruby

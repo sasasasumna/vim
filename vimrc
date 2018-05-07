@@ -6,7 +6,7 @@ syntax on            " enable syntax highlighting
 set bs=2                       " set backspace to 2 when removing whitespace
 set clipboard=unnamed          " share system clipboard
 set cursorline                 " highlight current line
-set directory=~/.vim/swp//     " swap files go here
+set directory=~/.vim/swp       " swap files go here
 set expandtab                  " expand tabs to spaces
 set hidden                     " hide buffers instead of closing them
 set history=1000               " command history of 1000
