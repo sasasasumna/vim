@@ -40,7 +40,7 @@ function package () {
     git submodule add $repo_url $submodule_name
   fi
 }
-git pull --force
+git submodule update --remote --merge
 
 set_group ruby
 package https://github.com/tpope/vim-rails.git

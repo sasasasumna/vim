@@ -3,68 +3,6 @@ set nocompatible     " disable backward compatibility with Vi
 set nowrap           " disable line wrapping
 syntax on            " enable syntax highlighting
 
-"" START Vundle configuration
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-
-call vundle#begin()
-
-" Vundle
-Plugin 'VundleVim/Vundle.vim'
-
-" Git
-Plugin 'airblade/vim-gitgutter'
-
-" Generic Programming Support
-Plugin 'jakedouglas/exuberant-ctags'
-Plugin 'janko-m/vim-test'
-Plugin 'neomake/neomake'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'Townk/vim-autoclose'
-Plugin 'tpope/vim-sensible'
-
-" Themes
-Plugin 'nanotech/jellybeans.vim'
-
-" Interface
-Plugin 'AnsiEsc.vim'
-Plugin 'ryanoasis/vim-devicons'
-Plugin 'junegunn/limelight.vim'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'majutsushi/tagbar'
-Plugin 'Valloric/YouCompleteMe'
-
-" File finding
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'rking/ag.vim'
-Plugin 'fweep/vim-zsh-path-completion'
-
-
-" Markdown / Writting
-Plugin 'reedes/vim-pencil'
-Plugin 'tpope/vim-markdown'
-Plugin 'jtratner/vim-flavored-markdown'
-Plugin 'LanguageTool'
-
-" Ruby
-Plugin 'tpope/vim-rbenv'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rake'
-Plugin 'slim-template/vim-slim'
-Plugin 'tpope/vim-endwise'
-
-" Javascript
-Plugin 'mxw/vim-jsx'
-Plugin 'pangloss/vim-javascript'
-
-set backspace=indent,eol,start  " backspace over everything in insert mode
-
-" All of your Plugins must be added before the following line
-call vundle#end()
-filetype plugin indent on    " required
-""" END Vundle configuration
-
 set bs=2                       " set backspace to 2 when removing whitespace
 set clipboard=unnamed          " share system clipboard
 set cursorline                 " highlight current line
