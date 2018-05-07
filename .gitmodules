@@ -1,0 +1,87 @@
+[submodule "pack/ruby/start/vim-rails"]
+	path = pack/ruby/start/vim-rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "pack/ruby/start/vim-rake"]
+	path = pack/ruby/start/vim-rake
+	url = https://github.com/tpope/vim-rake.git
+[submodule "pack/ruby/start/vim-bundler"]
+	path = pack/ruby/start/vim-bundler
+	url = https://github.com/tpope/vim-bundler.git
+[submodule "pack/ruby/start/vim-rbenv"]
+	path = pack/ruby/start/vim-rbenv
+	url = https://github.com/tpope/vim-rbenv.git
+[submodule "pack/ruby/start/vim-slim"]
+	path = pack/ruby/start/vim-slim
+	url = https://github.com/slim-template/vim-slim
+[submodule "pack/ruby/start/vim-endwise"]
+	path = pack/ruby/start/vim-endwise
+	url = https://github.com/tpope/vim-endwise.git
+[submodule "pack/ruby/start/deoplete-ruby"]
+	path = pack/ruby/start/deoplete-ruby
+	url = https://github.com/fishbullet/deoplete-ruby
+[submodule "pack/javascript/start/vim-jsx"]
+	path = pack/javascript/start/vim-jsx
+	url = https://github.com/mxw/vim-jsx
+[submodule "pack/javascript/start/vim-javascript"]
+	path = pack/javascript/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript
+[submodule "pack/syntax/start/vim-coffee-script"]
+	path = pack/syntax/start/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
+[submodule "pack/syntax/start/vim-markdown"]
+	path = pack/syntax/start/vim-markdown
+	url = https://github.com/tpope/vim-markdown.git
+[submodule "pack/syntax/start/vim-css-color"]
+	path = pack/syntax/start/vim-css-color
+	url = https://github.com/ap/vim-css-color.git
+[submodule "pack/golang/start/vim-go"]
+	path = pack/golang/start/vim-go
+	url = https://github.com/fatih/vim-go
+[submodule "pack/golang/start/deoplete-go"]
+	path = pack/golang/start/deoplete-go
+	url = https://github.com/zchee/deoplete-go
+[submodule "pack/ide/start/vim-easytags"]
+	path = pack/ide/start/vim-easytags
+	url = https://github.com/xolox/vim-easytags
+[submodule "pack/ide/start/vim-misc"]
+	path = pack/ide/start/vim-misc
+	url = https://github.com/xolox/vim-misc
+[submodule "pack/ide/start/ale"]
+	path = pack/ide/start/ale
+	url = https://github.com/w0rp/ale
+[submodule "pack/ide/start/vim-gitgutter"]
+	path = pack/ide/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter
+[submodule "pack/ide/start/vim-sensible"]
+	path = pack/ide/start/vim-sensible
+	url = https://github.com/tpope/vim-sensible
+[submodule "pack/ide/start/vim-devicons"]
+	path = pack/ide/start/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons
+[submodule "pack/ide/start/vim-airline"]
+	path = pack/ide/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "pack/ide/start/vim-airline-themes"]
+	path = pack/ide/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes
+[submodule "pack/ide/start/ctrlp.vim"]
+	path = pack/ide/start/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim
+[submodule "pack/ide/start/ack.vim"]
+	path = pack/ide/start/ack.vim
+	url = https://github.com/mileszs/ack.vim
+[submodule "pack/ide/start/vim-zsh-path-completion"]
+	path = pack/ide/start/vim-zsh-path-completion
+	url = https://github.com/fweep/vim-zsh-path-completion
+[submodule "pack/ide/start/vim-hug-neovim-rpc"]
+	path = pack/ide/start/vim-hug-neovim-rpc
+	url = https://github.com/roxma/vim-hug-neovim-rpc
+[submodule "pack/ide/start/nvim-yarp"]
+	path = pack/ide/start/nvim-yarp
+	url = https://github.com/roxma/nvim-yarp
+[submodule "pack/ide/start/deoplete.nvim"]
+	path = pack/ide/start/deoplete.nvim
+	url = https://github.com/Shougo/deoplete.nvim
+[submodule "pack/colorschemes/start/jellybeans.vim"]
+	path = pack/colorschemes/start/jellybeans.vim
+	url = https://github.com/nanotech/jellybeans.vim
