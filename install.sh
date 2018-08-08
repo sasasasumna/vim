@@ -56,6 +56,7 @@ package https://github.com/fishbullet/deoplete-ruby
 set_group javascript
 package https://github.com/mxw/vim-jsx
 package https://github.com/pangloss/vim-javascript
+package https://github.com/carlitux/deoplete-ternjs
 
 set_group syntax
 package https://github.com/kchmck/vim-coffee-script.git
@@ -65,9 +66,11 @@ package https://github.com/ap/vim-css-color.git
 set_group golang
 package https://github.com/fatih/vim-go
 package https://github.com/zchee/deoplete-go
+package https://github.com/Blackrush/vim-gocode
 
 set_group ide
-package https://github.com/xolox/vim-easytags
+package https://github.com/tpope/vim-projectionist
+package https://github.com/ludovicchabant/vim-gutentags
 package https://github.com/xolox/vim-misc
 package https://github.com/w0rp/ale
 package https://github.com/airblade/vim-gitgutter
@@ -81,6 +84,10 @@ package https://github.com/fweep/vim-zsh-path-completion
 package https://github.com/roxma/vim-hug-neovim-rpc
 package https://github.com/roxma/nvim-yarp
 package https://github.com/Shougo/deoplete.nvim
+package https://github.com/neomake/neomake
+
+set_group zsh
+package https://github.com/zchee/deoplete-zsh
 
 set_group colorschemes
 package https://github.com/nanotech/jellybeans.vim

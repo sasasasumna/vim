@@ -85,3 +85,24 @@
 [submodule "pack/colorschemes/start/jellybeans.vim"]
 	path = pack/colorschemes/start/jellybeans.vim
 	url = https://github.com/nanotech/jellybeans.vim
+[submodule "pack/ide/start/neomake"]
+	path = pack/ide/start/neomake
+	url = https://github.com/neomake/neomake
+[submodule "pack/ide/start/vim-gutentags"]
+	path = pack/ide/start/vim-gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags
+[submodule "pack/javascript/start/deoplete-ternjs"]
+	path = pack/javascript/start/deoplete-ternjs
+	url = https://github.com/carlitux/deoplete-ternjs
+[submodule "pack/golang/start/vim-gocode"]
+	path = pack/golang/start/vim-gocode
+	url = https://github.com/Blackrush/vim-gocode
+[submodule "pack/golang/start/vim-godebug"]
+	path = pack/golang/start/vim-godebug
+	url = https://github.com/jodosha/vim-godebug
+[submodule "pack/ide/start/vim-projectionist"]
+	path = pack/ide/start/vim-projectionist
+	url = https://github.com/tpope/vim-projectionist
+[submodule "pack/zsh/start/deoplete-zsh"]
+	path = pack/zsh/start/deoplete-zsh
+	url = https://github.com/zchee/deoplete-zsh

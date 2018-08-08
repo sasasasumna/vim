@@ -61,18 +61,44 @@ let g:javascript_enable_domhtmlcss = 1
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-if executable('ag')
-  set grepprg=ag\ --nogroup\ --nocolor " Use ag over grep
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+if executable('rg')
+  set grepprg=rg\ --color=never
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+  let g:ctrlp_use_caching = 0
+elseif executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
 
+
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" ===============
+" Deoplete
+" ===============
+let g:python3_host_skip_check = 1
+let g:python3_host_prog = '/usr/bin/python'
+
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+let g:deoplete#auto_complete_start_length = 1
+let g:deoplete#keyword_patterns = {}
+let g:deoplete#keyword_patterns['default'] = '\h\w*'
+let g:deoplete#omni#input_patterns = {}
+"call deoplete#custom#source('_', 'converters', ['converter_auto_paren', 'converter_auto_delimiter', 'converter_remove_overlap'])
+imap <expr> <tab>   pumvisible() ? "\<c-n>" : "\<tab>"
+imap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<tab>"
+set completeopt-=preview
+
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+let g:deoplete#sources#go#align_class = 1
+let g:deoplete#sources#go#gocode_binary = '/home/adam/Development/golang/bin/gocode'
+let g:deoplete#sources#go#auto_goos = 1
+
+let g:deoplete#sources#ternjs#tern_bin = '/home/adam/.nodenv/shims/tern'
+let g:deoplete#sources#ternjs#filetypes = ['jsx', 'js.jsx', 'javascript.jsx', 'es6', 'js.es6', 'vue', 'js.vue']
 
 " ===============
 " Remove trailing spaces
@@ -115,8 +141,8 @@ nmap <C-CR> <Plug>(fullscreen-toggle)
 set termguicolors
 set guioptions=
 set linespace=2
-set guifont=Inconsolata:h14
-set gfn=Inconsolata\ 14
+set guifont=Inconsolata:h12
+set gfn=Inconsolata\ 12
 
 " ===============
 " File extension / type associations
@@ -128,5 +154,67 @@ au BufNewFile,BufRead *.dump set filetype=sql
 " Neomake Linters
 " ===============
 autocmd! BufWritePost * Neomake
-let g:neomake_javascript_enabled_makers = ['eslint']
+
+let g:neomake_error_sign   = {'text': '✖', 'texthl': 'NeomakeErrorSign'}
+let g:neomake_warning_sign = {'text': '∆', 'texthl': 'NeomakeWarningSign'}
+let g:neomake_message_sign = {'text': '➤', 'texthl': 'NeomakeMessageSign'}
+let g:neomake_info_sign    = {'text': 'ℹ', 'texthl': 'NeomakeInfoSign'}
+let g:neomake_go_gometalinter_maker = {
+  \ 'args': [
+  \   '--tests',
+  \   '--enable-gc',
+  \   '--concurrency=3',
+  \   '--fast',
+  \   '-D', 'aligncheck',
+  \   '-D', 'dupl',
+  \   '-D', 'gocyclo',
+  \   '-D', 'gotype',
+  \   '-E', 'errcheck',
+  \   '-E', 'misspell',
+  \   '-E', 'unused',
+  \   '%:p:h',
+  \ ],
+  \ 'append_file': 0,
+  \ 'errorformat':
+  \   '%E%f:%l:%c:%trror: %m,' .
+  \   '%W%f:%l:%c:%tarning: %m,' .
+  \   '%E%f:%l::%trror: %m,' .
+  \   '%W%f:%l::%tarning: %m'
+  \ }
+
+let g:neomake_coffee_enabled_makers = ['coffeelint']
+let g:neomake_cpp_enabled_makers = ['gcc']
+let g:neomake_css_enabled_makers = ['stylelint']
+let g:neomake_dockerfile_enabled_makers = ['hadolint']
+let g:neomake_go_enabled_makers = ['gometalinter']
+let g:neomake_haml_enabled_makers = ['haml-lint']
+let g:neomake_javascript_enabled_makers = ['eslint', 'stylelint']
+let g:neomake_json_enabled_makers = ['eslint']
+let g:neomake_ruby_enabled_makers = ['rubocop', 'reek']
+let g:neomake_scss_enabled_makers = ['scsslint', 'stylelint']
+let g:neomake_slim_enabled_makers = ['slimlint']
+let g:neomake_sql_enabled_makers = ['sqlint']
+let g:neomake_typescript_enabled_makers = ['tslint']
+
+
+" ===============
+" Gutentags
+" ===============
+set statusline+=%{gutentags#statusline()}
+
+" ===============
+" Vim-Go
+" ===============
+let g:go_def_mapping_enabled = 0
+let g:go_fmt_command = 'goimports'
+let g:go_fmt_fail_silently = 1
+let g:go_term_enabled = 1
+autocmd FileType go setlocal shiftwidth=4 tabstop=4 softtabstop=4 noexpandtab
+autocmd FileType go nmap <buffer> <leader>r <plug>(go-run)
+autocmd FileType go nmap <buffer> <leader>b <plug>(go-build)
+autocmd FileType go nmap <buffer> <leader>t <plug>(go-test)
+autocmd FileType go nmap <buffer> <leader>e <plug>(go-rename)
+autocmd FileType go nmap <buffer> gd <plug>(go-def-vertical)
+autocmd FileType go nmap <buffer> <c-]> <plug>(go-def-vertical)
+autocmd FileType go nmap <buffer> <leader>i <plug>(go-info)
 
