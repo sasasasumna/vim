@@ -1,4 +1,4 @@
-set encoding=utf-8   " file encoding defaults to UTF8
+set encoding=utf8   " file encoding defaults to UTF8
 set nocompatible     " disable backward compatibility with Vi
 set nowrap           " disable line wrapping
 syntax on            " enable syntax highlighting
@@ -139,16 +139,47 @@ let g:jellybeans_use_term_italics = 1
 colorscheme jellybeans
 nmap <C-CR> <Plug>(fullscreen-toggle)
 set termguicolors
+set guiheadroom=0
 set guioptions=
 set linespace=2
-set guifont=Inconsolata:h12
-set gfn=Inconsolata\ 12
+set guifont=Inconsolata\ for\ Powerline:h11
+set gfn=Inconsolata\ for\ Powerline\ 11
 
 " ===============
 " File extension / type associations
 " ===============
 au BufNewFile,BufRead *.es6 set filetype=javascript
 au BufNewFile,BufRead *.dump set filetype=sql
+
+" ===============
+" Airline
+" ===============
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
 
 " ===============
 " Neomake Linters
