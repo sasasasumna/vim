@@ -106,3 +106,6 @@
 [submodule "pack/zsh/start/deoplete-zsh"]
 	path = pack/zsh/start/deoplete-zsh
 	url = https://github.com/zchee/deoplete-zsh
+[submodule "pack/colorschemes/start/vim-razer"]
+	path = pack/colorschemes/start/vim-razer
+	url = https://github.com/DanManN/vim-razer

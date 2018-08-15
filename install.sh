@@ -91,3 +91,4 @@ package https://github.com/zchee/deoplete-zsh
 
 set_group colorschemes
 package https://github.com/nanotech/jellybeans.vim
+package https://github.com/DanManN/vim-razer
