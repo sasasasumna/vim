@@ -109,3 +109,6 @@
 [submodule "pack/colorschemes/start/vim-razer"]
 	path = pack/colorschemes/start/vim-razer
 	url = https://github.com/DanManN/vim-razer
+[submodule "pack/javascript/start/yats.vim"]
+	path = pack/javascript/start/yats.vim
+	url = https://github.com/HerringtonDarkholme/yats.vim.git

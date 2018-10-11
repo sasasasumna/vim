@@ -1,9 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/adam/Development/golang/src/digital_medical/messenger'
-let g:netrw_dirhist_2='/Users/adam/Development/golang/src/gojilabs/updater'
-let g:netrw_dirhist_3='/Users/adam'
-let g:netrw_dirhist_4='/Users/adam/Development/golang/src/gojilabs/updater'
-let g:netrw_dirhist_5='/Users/adam/Development/digital-medical/dashboard'
-let g:netrw_dirhist_6='/Users/adam/Development/golang/src/gojilabs/updater'
-let g:netrw_dirhist_7='/home/adam/Development/digital-medical/dashboard'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/adam/Development/golang/src/gojilabs/logger'

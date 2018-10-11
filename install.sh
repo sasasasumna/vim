@@ -57,6 +57,7 @@ set_group javascript
 package https://github.com/mxw/vim-jsx
 package https://github.com/pangloss/vim-javascript
 package https://github.com/carlitux/deoplete-ternjs
+package https://github.com/HerringtonDarkholme/yats.vim.git
 
 set_group syntax
 package https://github.com/kchmck/vim-coffee-script.git
